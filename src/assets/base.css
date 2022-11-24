@@ -1,0 +1,77 @@
+:root {
+--theme-c-white: #ffffff;
+--theme-c-white-soft: #f8f8f8;
+--theme-c-white-mute: #f2f2f2;
+
+--theme-c-black: #000000;
+--theme-c-black-soft: #222222;
+--theme-c-black-mute: #282828;
+
+--theme-c-pastel-1: #f0f;
+--theme-c-pastel-2: #0ff;
+--theme-c-pastel-3: #ff0;
+
+--theme-c-indigo: #2c3e50;
+
+--theme-c-divider-light-1: rgba(60, 60, 60, 0.29);
+--theme-c-divider-light-2: rgba(60, 60, 60, 0.12);
+--theme-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+--theme-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+--theme-c-text-light-1: var(--theme-c-indigo);
+--theme-c-text-light-2: rgba(60, 60, 60, 0.66);
+--theme-c-text-dark-1: var(--theme-c-white);
+--theme-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+--theme-transition-time: 0.5s;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--theme-c-white);
+  --color-background-soft: var(--theme-c-white-soft);
+  --color-background-mute: var(--theme-c-white-mute);
+
+  --color-border: var(--theme-c-divider-light-2);
+  --color-border-hover: var(--theme-c-divider-light-1);
+
+  --color-heading: var(--theme-c-text-light-1);
+  --color-text: var(--theme-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--theme-c-black);
+    --color-background-soft: var(--theme-c-black-soft);
+    --color-background-mute: var(--theme-c-black-mute);
+
+    --color-border: var(--theme-c-divider-dark-2);
+    --color-border-hover: var(--theme-c-divider-dark-1);
+
+    --color-heading: var(--theme-c-text-dark-1);
+    --color-text: var(--theme-c-text-dark-2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color var(--theme-transition-time), background-color var(--theme-transition-time);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
